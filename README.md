@@ -6,5 +6,4 @@ Kapely:
 2. Ellectric Callboy
 3. ...
 
-
-    ![Polaris](https://en.wikipedia.org/wiki/Polaris_%28Australian_band%29#/media/File:Polaris_2019_Landscape.jpg)https://en.wikipedia.org/wiki/Polaris_%28Australian_band%29#/media/File:Polaris_2019_Landscape.jpg)
+    ![Tux, the Linux mascot](http://www.meetfactory.cz/media/images/rescaled/Polaris_2020-320x426.JPG)
