@@ -1,22 +1,24 @@
 var numofturned = 0;
-var elements = 8*2
+var elements = 8*2;
 
 function turnCard(cardid) {
     
     numofturned = numofturned + 1;
 
     if(numofturned > 2){
-        for(var a = 1; a < elements; a++){
-            otaznik(a)
+
+        for(var a = 1; a <= elements; a++){
+            questionmark(a); 
         }
         numofturned = 1;
     }
-
-    const el = document.getElementById("card-" + cardid);
-    obrazek(el, cardid);
+    picture(cardid);
 }
 
-function obrazek(el, cardid) {
+function picture(cardid) {
+
+    const el = document.getElementById("card-" + cardid);
+
     if(cardid > 8){
         cardid = cardid - 8
     }
@@ -27,8 +29,7 @@ function obrazek(el, cardid) {
     }
 }
 
-function otaznik(a) {
-
+function questionmark(a) {
 
     const el = document.getElementById("card-" + a);
 
