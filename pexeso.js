@@ -1,9 +1,14 @@
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+
+
 var numofturned = 0;
 var lastturned = null;
 var elements = 8*2;
 var cards = [0, 0, 0, 0, 0, 0, 0, 0];
 
 function turnCard(cardid) {
+
+    confetti();
 
     var c = true;
     
@@ -37,6 +42,19 @@ function turnCard(cardid) {
             lastturned = null;
         }
 
+    }
+
+    var d = 0;
+
+    for(var b = 0; b < 8; b++){
+        if(cards[b] == 1){
+            if(b+1 == cardid%8){
+                d = d + 1;
+            } 
+        }
+    } 
+    if (d == 8){
+        confetti();
     }
 }
 
