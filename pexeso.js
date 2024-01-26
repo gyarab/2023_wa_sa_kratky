@@ -1,19 +1,15 @@
 var numofturned = 0;
-var lastturned = 0;
+var lastturned = null;
 var elements = 8*2;
 var cards = [0, 0, 0, 0, 0, 0, 0, 0];
 
 function turnCard(cardid) {
     
     if (cardid != lastturned){
-
         
-        console.log(cardid%8 == lastturned%8);
         if (cardid%8 == lastturned%8){
             cards[(cardid-1)%8] = 1;
         }
-
-        lastturned = cardid;
 
         numofturned = numofturned + 1;
 
@@ -25,6 +21,11 @@ function turnCard(cardid) {
             numofturned = 1;
         }
         picture(cardid);
+        if (lastturned == null){
+            lastturned = cardid;
+        } else {
+            lastturned = null;
+        }
 
     }
 
