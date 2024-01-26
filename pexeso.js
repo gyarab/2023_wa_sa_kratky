@@ -4,8 +4,18 @@ var elements = 8*2;
 var cards = [0, 0, 0, 0, 0, 0, 0, 0];
 
 function turnCard(cardid) {
+
+    var c = true;
     
-    if (cardid != lastturned){
+    for(var b = 0; b < 8; b++){
+        if(cards[b] == 1){
+            if(b+1 == cardid%8){
+                c= false;
+            } 
+        }
+    }
+
+    if (cardid != lastturned && c == true){
         
         if (cardid%8 == lastturned%8){
             cards[(cardid-1)%8] = 1;
@@ -28,7 +38,6 @@ function turnCard(cardid) {
         }
 
     }
-
 }
 
 function picture(cardid) {
@@ -51,7 +60,7 @@ function questionmark(a) {
 
     el.src = 'img/otaznik.png';
 
-    for(var b = 0; b < 9; b++){
+    for(var b = 0; b < 8; b++){
         if(cards[b] == 1){
             picture(b + 1);
             picture(b+8 + 1);
